@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -32,4 +33,26 @@ public class PlayerMovement : MonoBehaviour {
         controller.Move(sidemove * Time.fixedDeltaTime, false, jump);
         jump = false;
     }
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Collide")
+        {
+            if ((this.transform.position.x - coll.collider.transform.position.x) < 0)
+            {
+            if ((this.transform.position.y - coll.collider.transform.position.y) < 0)
+                {
+                   
+                }
+                else
+                {
+                    SceneManager.LoadScene("test_lvl");
+
+                }
+
+            }
+            
+        }
+    }
 }
+    
+
