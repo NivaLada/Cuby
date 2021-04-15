@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour {
     float sidemove = 100f;
     bool jump = false;
 
+    float playerpositionx = -1000000000f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,22 @@ public class PlayerMovement : MonoBehaviour {
         {
             jump = true;
         }
+
+        
+        if(this.transform.position.y < -10) // check if player is falling an reset
+        {
+            SceneManager.LoadScene("test_lvl");
+        }
+        
+        if (this.transform.position.x < this.playerpositionx) // check if player is standing and reset
+        {
+            SceneManager.LoadScene("test_lvl");
+        }
+        else
+        {
+            this.playerpositionx = this.transform.position.x;
+        }
+
     }
 
     private void FixedUpdate()
@@ -33,6 +51,7 @@ public class PlayerMovement : MonoBehaviour {
         controller.Move(sidemove * Time.fixedDeltaTime, false, jump);
         jump = false;
     }
+    /* Niklas Dorsch alter Collisionscode
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Collide")
@@ -53,6 +72,7 @@ public class PlayerMovement : MonoBehaviour {
             
         }
     }
+    */
 }
     
 
