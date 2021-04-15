@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour {
     float sidemove = 100f;
     bool jump = false;
 
-    float playerpositionx = -1000000000f;
+    float oldplayerpositionx = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -35,15 +35,21 @@ public class PlayerMovement : MonoBehaviour {
             SceneManager.LoadScene("test_lvl");
         }
         
-        if (this.transform.position.x < this.playerpositionx) // check if player is standing and reset
+        if(this.oldplayerpositionx == 0f) // check first Frame and set position
         {
-            SceneManager.LoadScene("test_lvl");
+            this.oldplayerpositionx = this.transform.position.x;
         }
-        else
+        else 
         {
-            this.playerpositionx = this.transform.position.x;
+            if (this.transform.position.x < this.oldplayerpositionx) // check if player is standing and reset
+            {
+                SceneManager.LoadScene("test_lvl");
+            }
+            else
+            {
+                this.oldplayerpositionx = this.transform.position.x;
+            }
         }
-
     }
 
     private void FixedUpdate()
