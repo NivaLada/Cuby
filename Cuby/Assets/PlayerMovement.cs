@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour {
         
         if(this.transform.position.y < -10) // check if player is falling an reset
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            AktionOnCollision();
         }
         
         if(this.oldplayerpositionx == 0f) // check first Frame and set position
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             if (this.transform.position.x < this.oldplayerpositionx) // check if player is standing and reset
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                AktionOnCollision();
             }
             else
             {
@@ -79,6 +79,11 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
     */
-}
-    
+    private void AktionOnCollision()
+    {
+        // Animation / Sound after Collision
 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // restart Scene
+
+    }
+}
