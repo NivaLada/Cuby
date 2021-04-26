@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
 
     float oldplayerpositionx = 0f;
+    float playerpostiony = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+        }
+
+        // perma reset y postion if variable is not null
+        if(this.playerpostiony != 0f)
+        {
+            transform.position = new Vector3(transform.position.x, this.playerpostiony, transform.position.z);
         }
 
 
@@ -92,6 +99,9 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator DestroyPlayer()
     {
+        // player y position perma reset
+        this.playerpostiony = this.transform.position.y;
+
         // save variables
         float sidemovesave = this.sidemove;
         float sidemovespeedsave = this.sidemovespeed;
