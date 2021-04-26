@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 
     public CharacterController2D controller;
-
+    public GameObject Player;
 
     public float sidemovespeed = 40f;
     float sidemove = 100f;
@@ -35,17 +36,17 @@ public class PlayerMovement : MonoBehaviour {
             jump = true;
         }
 
-        
-        if(this.transform.position.y < -10) // check if player is falling an reset
+
+        if (this.transform.position.y < -10) // check if player is falling an reset
         {
             AktionOnCollision();
         }
-        
-        if(this.oldplayerpositionx == 0f) // check first Frame and set position
+
+        if (this.oldplayerpositionx == 0f) // check first Frame and set position
         {
             this.oldplayerpositionx = this.transform.position.x;
         }
-        else 
+        else
         {
             if (this.transform.position.x < this.oldplayerpositionx) // check if player is standing and reset
             {
@@ -87,9 +88,37 @@ public class PlayerMovement : MonoBehaviour {
     */
     private void AktionOnCollision()
     {
-        // Animation / Sound after Collision
+        StartCoroutine(DestroyPlayer());
+    }
+    IEnumerator DestroyPlayer()
+    {
+        // save variables
+        float sidemovesave = this.sidemove;
+        float sidemovespeedsave = this.sidemovespeed;
+        
+        // set player invisibl
+        SetPlayerVisibility(false);
+        
+        // set player speed to 0
+        this.sidemove = 0f;
+        this.sidemovespeed = 0f;
+        
+        // wait 5 seconds
+        yield return new WaitForSeconds(5);
+        
+        // set player Visibil
+        SetPlayerVisibility(true);
+        
+        // set playerspeed to normal
+        this.sidemove = sidemovesave;
+        this.sidemovespeed = sidemovespeedsave;
+        
+        // restart scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // restart Scene
-
+    void SetPlayerVisibility(bool Visibility)
+    {
+        this.Player.GetComponent<Renderer>().enabled = Visibility;
     }
 }

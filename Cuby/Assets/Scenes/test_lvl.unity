@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 44416954}
+  Player: {fileID: 44416949}
   sidemovespeed: 100
 --- !u!1 &86915776
 GameObject:
