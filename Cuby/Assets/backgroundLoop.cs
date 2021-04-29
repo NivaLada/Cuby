@@ -12,7 +12,7 @@ public class backgroundLoop : MonoBehaviour
 
     void Start()
     {
-        mainCamera = gameObject.GetComponent<Camera>();
+        mainCamera = gameObject.GetComponentInParent<Camera>();
         screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
         foreach (GameObject obj in levels)
         {
@@ -40,7 +40,7 @@ public class backgroundLoop : MonoBehaviour
         if (children.Length > 1)
         {
             GameObject firstChild = children[1].gameObject;
-            GameObject lastChild = children[children.Length - 1].gameObject;
+            GameObject lastChild = children[children.Length - 1 ].gameObject;
             float halfObjectWidth = lastChild.GetComponent<SpriteRenderer>().bounds.extents.x - choke;
             if (transform.position.x + screenBounds.x > lastChild.transform.position.x + halfObjectWidth)
             {
