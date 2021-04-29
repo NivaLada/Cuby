@@ -10,11 +10,14 @@ public class PlayerAnimatorController : MonoBehaviour
     static bool canJump = true;
     public float jumpCooldown = 0.49f;
     CharacterController2D controller;
+   [SerializeField] private AudioClip[] clips;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController2D>();
+        audioSource = GetComponent<AudioSource>();
     }
    
     // Update is called once per frame
@@ -28,6 +31,8 @@ public class PlayerAnimatorController : MonoBehaviour
             {
 
                 animator.SetTrigger("Jump");
+                AudioClip clip = GetRandomClip();
+                audioSource.PlayOneShot(clip);
 
             }
 
@@ -59,6 +64,12 @@ public class PlayerAnimatorController : MonoBehaviour
             return true;
         }
         return false;
+    }
+    private AudioClip GetRandomClip()
+    {
+
+        return clips[UnityEngine.Random.Range(0, clips.Length)];
+    
     }
 
 
