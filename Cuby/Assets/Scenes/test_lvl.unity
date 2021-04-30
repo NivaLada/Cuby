@@ -298,6 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 44416954}
   Player: {fileID: 44416949}
+  DeathAnimation: {fileID: 234379919}
   sidemovespeed: 100
 --- !u!1 &86915776
 GameObject:

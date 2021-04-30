@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController2D controller;
     public GameObject Player;
+    public ParticleSystem DeathAnimation;
 
     public float sidemovespeed = 40f;
     float sidemove = 100f;
@@ -112,7 +113,13 @@ public class PlayerMovement : MonoBehaviour
         // set player speed to 0
         this.sidemove = 0f;
         this.sidemovespeed = 0f;
-        
+
+        // set up for DeathAnimation
+        this.DeathAnimation.transform.position = transform.position;
+
+        // start death partikels
+        this.DeathAnimation.Play();
+
         // wait 5 seconds
         yield return new WaitForSeconds(5);
         
