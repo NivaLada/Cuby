@@ -14,4 +14,8 @@ public class main_menu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Char() {
+
+        SceneManager.LoadScene("test_lvl");
+    }
 }
