@@ -620,6 +620,7 @@ GameObject:
   - component: {fileID: 433165935}
   - component: {fileID: 433165934}
   - component: {fileID: 433165933}
+  - component: {fileID: 433165936}
   m_Layer: 5
   m_Name: Cube_3
   m_TagString: Untagged
@@ -689,7 +690,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 433165934}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 433165936}
+        m_MethodName: Cube
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &433165934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,6 +739,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433165931}
   m_CullTransparentMesh: 0
+--- !u!114 &433165936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433165931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f901a6a1d9dc69a4eb80821abaa4fe86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1058069115}
+  skin: {fileID: 21300000, guid: 19560dc20a2202d458396e4958649a1b, type: 3}
 --- !u!1 &575206653
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +765,7 @@ GameObject:
   - component: {fileID: 575206657}
   - component: {fileID: 575206656}
   - component: {fileID: 575206655}
+  - component: {fileID: 575206658}
   m_Layer: 5
   m_Name: Cube_8
   m_TagString: Untagged
@@ -808,7 +835,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 575206656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 575206653}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &575206656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -846,6 +884,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575206653}
   m_CullTransparentMesh: 0
+--- !u!114 &575206658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575206653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f901a6a1d9dc69a4eb80821abaa4fe86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1058069115}
+  skin: {fileID: 21300000, guid: f508d0e2b3482bb4f9b114bffddfcbd2, type: 3}
 --- !u!1 &580614431
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +910,7 @@ GameObject:
   - component: {fileID: 580614435}
   - component: {fileID: 580614434}
   - component: {fileID: 580614433}
+  - component: {fileID: 580614436}
   m_Layer: 5
   m_Name: Cube_2
   m_TagString: Untagged
@@ -927,7 +980,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 580614434}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 580614436}
+        m_MethodName: Cube
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &580614434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,6 +1029,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580614431}
   m_CullTransparentMesh: 0
+--- !u!114 &580614436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580614431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f901a6a1d9dc69a4eb80821abaa4fe86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1058069115}
+  skin: {fileID: 21300000, guid: 7b4a27c2878913048b75e0cb15ed9aec, type: 3}
 --- !u!1 &643624693
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +1055,7 @@ GameObject:
   - component: {fileID: 643624697}
   - component: {fileID: 643624696}
   - component: {fileID: 643624695}
+  - component: {fileID: 643624698}
   m_Layer: 5
   m_Name: Cube_6
   m_TagString: Untagged
@@ -1046,7 +1125,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 643624696}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 643624698}
+        m_MethodName: Cube
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &643624696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1084,6 +1174,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643624693}
   m_CullTransparentMesh: 0
+--- !u!114 &643624698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643624693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f901a6a1d9dc69a4eb80821abaa4fe86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1058069115}
+  skin: {fileID: 21300000, guid: 17af4abaf905ce14aa96b6d1349a2065, type: 3}
 --- !u!1 &733910923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1278,7 @@ GameObject:
   - component: {fileID: 858970001}
   - component: {fileID: 858970000}
   - component: {fileID: 858969999}
+  - component: {fileID: 858970002}
   m_Layer: 5
   m_Name: Cube_7
   m_TagString: Untagged
@@ -1243,7 +1348,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 858970000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 858970002}
+        m_MethodName: Cube
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &858970000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,6 +1397,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858969997}
   m_CullTransparentMesh: 0
+--- !u!114 &858970002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858969997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f901a6a1d9dc69a4eb80821abaa4fe86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1058069115}
+  skin: {fileID: 21300000, guid: 850ae7e677773fd459ff828fa0bb42c8, type: 3}
 --- !u!1 &989066262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1620,7 @@ GameObject:
   - component: {fileID: 1040403974}
   - component: {fileID: 1040403973}
   - component: {fileID: 1040403972}
+  - component: {fileID: 1040403975}
   m_Layer: 5
   m_Name: Cube_5
   m_TagString: Untagged
@@ -1559,7 +1690,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1040403973}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1040403975}
+        m_MethodName: Cube
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1040403973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1597,6 +1739,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040403970}
   m_CullTransparentMesh: 0
+--- !u!114 &1040403975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040403970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f901a6a1d9dc69a4eb80821abaa4fe86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1058069115}
+  skin: {fileID: 21300000, guid: 1b43ece866063de46acf22d4680fda30, type: 3}
 --- !u!1 &1055296287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,6 +1948,7 @@ GameObject:
   - component: {fileID: 1308944149}
   - component: {fileID: 1308944148}
   - component: {fileID: 1308944147}
+  - component: {fileID: 1308944150}
   m_Layer: 5
   m_Name: Cube_4
   m_TagString: Untagged
@@ -1861,7 +2018,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1308944148}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1308944150}
+        m_MethodName: Cube
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1308944148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1899,6 +2067,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308944145}
   m_CullTransparentMesh: 0
+--- !u!114 &1308944150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308944145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f901a6a1d9dc69a4eb80821abaa4fe86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1058069115}
+  skin: {fileID: 21300000, guid: 95132264dc2aca5438005299608b706c, type: 3}
 --- !u!1 &1332289891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,6 +2176,7 @@ GameObject:
   - component: {fileID: 1433668998}
   - component: {fileID: 1433668997}
   - component: {fileID: 1433668996}
+  - component: {fileID: 1433668999}
   m_Layer: 5
   m_Name: Cube_1
   m_TagString: Untagged
@@ -2063,7 +2246,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1433668997}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433668999}
+        m_MethodName: Cube
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1433668997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2101,6 +2295,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433668994}
   m_CullTransparentMesh: 0
+--- !u!114 &1433668999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433668994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f901a6a1d9dc69a4eb80821abaa4fe86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1058069115}
+  skin: {fileID: 21300000, guid: 92c33089afc7d9e43a2b5f5c31689d17, type: 3}
 --- !u!1 &1634099229
 GameObject:
   m_ObjectHideFlags: 0
