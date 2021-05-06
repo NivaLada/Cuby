@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -20,6 +21,7 @@ public class Character_Select : MonoBehaviour
 
        
             player.GetComponent<SpriteRenderer>().sprite = skin;
+            SceneManager.LoadScene("Character_select");
     }
     
 }
