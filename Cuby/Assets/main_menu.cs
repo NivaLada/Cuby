@@ -7,7 +7,7 @@ public class main_menu : MonoBehaviour
 {
     public void singleplayerstart()
     {
-        SceneManager.LoadScene("test_lvl");
+        SceneManager.LoadScene("levelselecter");
     }
 
     public void altf4()
